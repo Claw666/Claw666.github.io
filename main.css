@@ -157,9 +157,10 @@
 	}
 
 	#wrapper {
-		-webkit-animation: sliderzoom linear 40s infinite alternate;
-		-moz-animation: sliderzoom linear 40s infinite alternate;
-		animation: sliderzoom linear 40s infinite alternate;
+		-moz-animation: wrapper 3s forwards;
+		-webkit-animation: wrapper 3s forwards;
+		-ms-animation: wrapper 3s forwards;
+		animation: wrapper 3s forwards;
 		height: 100%;
 		left: 0;
 		opacity: 0;
@@ -171,10 +172,9 @@
 /* BG */
 
 	#bg {
-		-moz-animation: bg 60s linear infinite;
-		-webkit-animation: bg 60s linear infinite;
-		-ms-animation: bg 60s linear infinite;
-		animation: bg 60s linear infinite;
+		-webkit-animation: bg linear 40s infinite alternate;
+		-moz-animation: bg linear 40s infinite alternate;
+		animation: bg linear 40s infinite alternate;
 		-moz-backface-visibility: hidden;
 		-webkit-backface-visibility: hidden;
 		-ms-backface-visibility: hidden;
