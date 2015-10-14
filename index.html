@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<!--
+	Website by Csongor Kocsis
+	Inspired by Bence Szikora
+	Popup: Magnific Popup by @dimsemenov, https://github.com/dimsemenov/Magnific-Popup
+	Button hover effect by Sean McCaffery, http://codepen.io/seanmccaffery/pen/xBpbG.
+	Aerial by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Csongor Kocsis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="Csongor Kocsis">
+		<link rel="stylesheet" href="D:\MyWebsite\Website 1.0\assets\css\main.css" />
+		<!-- Magnific Popup core CSS file -->
+		<link rel="stylesheet" href="D:/MyWebsite/Website 1.0/dist/magnific-popup.css">
+
+		<!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+		<!-- Magnific Popup core JS file -->
+		<script src="D:/MyWebsite/Website 1.0/dist/jquery.magnific-popup.js"></script>
+		
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="bg"></div>
+			<a class="popup-link" href="D:\MyWebsite\Website 1.0\CV.pdf">
+				<div id="svg-wrapper">
+  					<svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+    					<rect class="shape" height="60" width="320" />
+    					<div class="text" id="CV">Curriculum Vitae</div>
+  					</svg>
+				</div>
+			</a>
+			
+			<div id="main">
+
+				<!--Header-->
+				<div id="header">
+					
+					<h1>Csongor Kocsis</h1>
+					<p><strong>Web Designer &nbsp;&bull;&nbsp; Student &nbsp;&bull;&nbsp; Engineer</strong></p>
+					<div id="row">
+						<a href="https://uk.linkedin.com/in/csongorkocsis"><i class="icon-linkedin"></i></a>
+						<a href="https://www.facebook.com/csongor.kocsis"><i class="icon-facebook"></i></a>
+						<a href="https://twitter.com/csongorkocsis"><i class="icon-twitter"></i></a>
+						<a href="https://github.com/Claw666"><i class="icon-github"></i></a>
+						<a href="mailto:csongor.kocsis.t@gmail.com"><i class="icon-mail"></i></a>
+					</div>
+				</div>
+
+				<!--Footer-->
+				<div id="footer">
+					<div id="template"><p>Design: <a href="http://html5up.net">HTML5 UP</a></p></div>
+					<div id="copyright">&copy; Csongor Kocsis</div>
+					<div id="insp">Inspired by <a href="http://benceszikora.me/">benceszikora.me</a></div>
+				</div>
+			</div>
+			
+		</div>
+		<script type="text/javascript">
+			$('.popup-link').magnificPopup({
+  				type: 'iframe'
+			});
+		</script>
+		<script type="text/javascript">
+			var getIphoneWindowHeight = function() {
+ 			// Get zoom level of mobile Safari
+			// Such zoom detection might not work correctly on other platforms
+			//
+			var zoomLevel = document.documentElement.clientWidth / window.innerWidth;
+
+			// window.innerHeight returns height of the visible area.
+			// We multiply it by zoom and get our real height.
+			return window.innerHeight * zoomLevel;
+			};
+		</script>
+		<script>
+			window.onload = function() { document.body.className = ''; }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+		</script>
+	</body>
+</html>
