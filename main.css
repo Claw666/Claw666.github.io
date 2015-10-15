@@ -383,11 +383,13 @@
 		cursor: default;
 		display: inline-block;
 		opacity: 0;
-		position: relative;
+		position: absolute;
 		text-align: center;
-		top: 15em;
+		top: 50%;
 		vertical-align: middle;
 		width: 100%;
+		left: 0;
+		margin-top: -100px;
 	}
 
 		#header h1 {
@@ -682,6 +684,7 @@
 		}
 		#svg-wrapper {
 			float: none;
+			margin-top: 1.5em;
 		}		
 	/* Header */
 
@@ -766,5 +769,9 @@
 
 		#svg-wrapper {
 			float: none;
+			margin-top: 1.5em;
 		}		
+		.text {
+			font-size: 1em;
+		}
 
