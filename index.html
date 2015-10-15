@@ -67,22 +67,5 @@
   				type: 'iframe'
 			});
 		</script>
-		<script type="text/javascript">
-			var getIphoneWindowHeight = function() {
- 			// Get zoom level of mobile Safari
-			// Such zoom detection might not work correctly on other platforms
-			//
-			var zoomLevel = document.documentElement.clientWidth / window.innerWidth;
-
-			// window.innerHeight returns height of the visible area.
-			// We multiply it by zoom and get our real height.
-			return window.innerHeight * zoomLevel;
-			};
-		</script>
-		<script>
-			window.onload = function() { document.body.className = ''; }
-			window.ontouchmove = function() { return false; }
-			window.onorientationchange = function() { document.body.scrollTop = 0; }
-		</script>
 	</body>
 </html>
