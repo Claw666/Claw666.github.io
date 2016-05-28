@@ -1,2 +1,0 @@
-# Csongor Kocsis
-Personal Website

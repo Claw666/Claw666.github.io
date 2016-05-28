@@ -1,82 +1,43 @@
 <!DOCTYPE HTML>
-<!--
-	Website by Csongor Kocsis
-	Inspired by Bence Szikora
-	Popup: Magnific Popup by @dimsemenov, https://github.com/dimsemenov/Magnific-Popup
-	Button hover effect by Sean McCaffery, http://codepen.io/seanmccaffery/pen/xBpbG.
-	Aerial by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>Csongor Kocsis</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="author" content="Csongor Kocsis">
-		<link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
-		<link rel="stylesheet" href="main.css" />
-		<!-- Magnific Popup core CSS file -->
-		<link rel="stylesheet" href="popup/magnific-popup.css">
-
-		<!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-		<!-- Magnific Popup core JS file -->
-		<script src="popup/jquery.magnific-popup.js"></script>
-		
-	</head>
-	<body>
-		<div id="wrapper">
-			<div id="bg"></div>
-			<a class="popup-link" href="Cs.K.CV.pdf">
-				<div id="svg-wrapper">
-  					<svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
-    					<rect class="shape" height="60" width="320" />
-    					<div class="text" id="CV">Curriculum Vitae</div>
-  					</svg>
-				</div>
-			</a>
-			
-			<div id="main">
-
-				<!--Header-->
-				<div id="header">
-					
-					<h1>Csongor Kocsis</h1>
-					<p><strong>Web Designer &nbsp;&bull;&nbsp; Student &nbsp;&bull;&nbsp; Engineer</strong></p>
-					<div id="row">
-						<a href="https://uk.linkedin.com/in/csongorkocsis"><i class="icon-linkedin"></i></a>
-						<a href="https://www.facebook.com/csongor.kocsis"><i class="icon-facebook"></i></a>
-						<a href="https://twitter.com/csongorkocsis"><i class="icon-twitter"></i></a>
-						<a href="https://github.com/Claw666"><i class="icon-github"></i></a>
-						<a href="mailto:csongor.kocsis.t@gmail.com"><i class="icon-mail"></i></a>
-					</div>
-				</div>
-
-				<!--Footer-->
-				<div id="footer">
-					<div id="template"><p>Design: <a href="http://html5up.net">HTML5 UP</a></p></div>
-					<div id="copyright">&copy; Csongor Kocsis</div>
-					<div id="insp">Inspired by <a href="http://benceszikora.me/">benceszikora.me</a></div>
-				</div>
-			</div>
-			
-		</div>
-		<script type="text/javascript">
-			$('.popup-link').magnificPopup({
-  				type: 'iframe'
-			});
-		</script>
-		<script>
-  			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-			ga('create', 'UA-68986480-1', 'auto');
-  			ga('send', 'pageview');
-
-		</script>
-	</body>
+<head>
+<title>Csongor Kocsis</title>
+<meta charset=utf-8 />
+<meta name=viewport content="width=device-width, initial-scale=1" />
+<link rel=stylesheet href=assets/css/main.min.css />
+</head>
+<body class=loading>
+<div id=wrapper>
+<div id=bg></div>
+<div id=overlay></div>
+<div id=main>
+<header id=header>
+<h1>Csongor Kocsis, <span class=typingtext></h1>
+<nav>
+<ul>
+<li><a href=https://uk.linkedin.com/in/csongorkocsis class="icon fa-linkedin"><span class=label>Dribbble</span></a></li>
+<li><a href=https://twitter.com/csongorkocsis class="icon fa-twitter"><span class=label>Twitter</span></a></li>
+<li><a href=https://www.facebook.com/csongor.kocsis class="icon fa-facebook"><span class=label>Facebook</span></a></li>
+<li><a href=# class="icon fa-github"><span class=label>Github</span></a></li>
+<li><a href=https://www.instagram.com/csongorkocsis/ class="icon fa-instagram"><span class=label>Instagram</span></a></li>
+<li><a href=https://github.com/Claw666 class="icon fa-envelope-o"><span class=label>Email</span></a></li>
+</ul>
+</nav>
+<p>WEB DEVELOPER</p>
+<hr>
+<p>STUDENT</p>
+<hr>
+<p>TRAVELER</p>
+<h2><button class="btn btn-1 btn-1e" onclick="window.location.href='mailto:csongor.kocsis.t@gmail.com'">HOLA ME!</button></h2>
+</header>
+<footer id=footer>
+<span class=copyright>&copy; 2016 Csongor Kocsis.</span>
+</footer>
+</div>
+</div>
+<script src=assets/js/jquery-1.12.4.min.js></script>
+<script src=assets/js/typed.min.js></script>
+<script>$(function(){$(".typingtext").typed({strings:["buona giornata!","have a good day!","szép jó napot!","guten Tag!"],typeSpeed:0,startDelay:0,backSpeed:0,backDelay:700,loop:true,loopCount:false,showCursor:false,cursorChar:"|",})});</script>
+<script>window.onload=function(){document.body.className=""};window.ontouchmove=function(){return false};window.onorientationchange=function(){document.body.scrollTop=0};</script>
+</body>
 </html>
