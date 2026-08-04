@@ -52,7 +52,11 @@ section.contact{margin-top:clamp(64px,12vw,120px)}
 .what h3{font-size:18px;font-weight:600;letter-spacing:-.01em;margin:0 0 4px}
 .what h3 span{color:var(--muted);font-weight:400}
 .what p{margin:0;color:var(--muted);font-size:15px}
+.what p+p{margin-top:8px}
 
+.what h3 a.plain{color:inherit}
+.what h3 a.plain:hover{color:var(--accent);text-decoration:none}
+.chip{display:inline-flex;align-items:center;margin:2px 0 7px;padding:3px 9px;border:1px solid color-mix(in srgb,var(--accent) 40%,transparent);border-radius:99px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;color:var(--accent)}
 .edu{display:flex;flex-wrap:wrap;gap:20px 40px}
 .edu div{flex:1 1 190px}
 .edu .when{padding-top:0;margin-bottom:3px}
@@ -66,6 +70,17 @@ section.contact{margin-top:clamp(64px,12vw,120px)}
 .links a.primary{border-color:var(--accent);color:var(--accent)}
 .links a.primary:hover{background:color-mix(in srgb,var(--accent) 12%,transparent)}
 
+.bar{display:flex;height:8px;border-radius:99px;overflow:hidden;background:var(--divider);margin-bottom:14px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 22px;font-size:13px;color:var(--muted);margin-bottom:clamp(36px,7vw,52px)}
+.legend>span{display:inline-flex;align-items:center;gap:7px}
+.legend i{width:8px;height:8px;border-radius:99px;background:var(--mark);flex:none}
+.legend i.mid{background:color-mix(in srgb,var(--mark) 52%,transparent)}
+.legend i.low{background:color-mix(in srgb,var(--mark) 24%,transparent)}
+.figs{display:flex;flex-wrap:wrap;gap:28px 40px}
+.figs>div{flex:0 1 120px}
+.figs b{display:block;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:24px;font-weight:400;letter-spacing:-.02em;font-variant-numeric:tabular-nums;margin-bottom:2px}
+.figs em{font-style:normal;font-size:13px;color:var(--muted)}
+.note{color:var(--muted);font-size:15px;margin:28px 0 0;max-width:52ch}
 footer{margin-top:clamp(72px,14vw,140px);padding-top:20px;background-image:linear-gradient(to right,var(--divider),var(--divider) 62%,transparent);background-size:100% 1px;background-repeat:no-repeat;background-position:0 0;font-size:13px;color:var(--muted)}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
@@ -96,7 +111,9 @@ footer{margin-top:clamp(72px,14vw,140px);padding-top:20px;background-image:linea
         <div class="when">2022 — now</div>
         <div class="what">
           <h3>Vesper <span>— Senior Software Engineer</span></h3>
-          <p>Ops with security on the side. Started as a full stack developer in Laravel and Vue.js.</p>
+          <p>Mostly internal tooling. We built and maintain the identity management system, and built a fuzzy product matching tool together with the AI team for internal use.</p>
+          <p>On the security side I ran a phishing campaign to show where our cybersecurity flaws sat, and hold security trainings for the company.</p>
+          <p>Still in Laravel and Vue.js day to day, with Terraform, Ansible and Packer on the infrastructure side.</p>
         </div>
       </div>
       <div class="row">
@@ -161,11 +178,35 @@ footer{margin-top:clamp(72px,14vw,140px);padding-top:20px;background-image:linea
           <p>Explored novel university-based recruiting for a fast-growing tech company, leading the team and owning the short-term plan.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="label"><h2>Hackathons</h2></div>
+    <p>Three entered, three won. Full write-ups on <a href="https://devpost.com/Claw666" rel="noreferrer">Devpost</a>.</p>
+    <div class="list" style="margin-top:8px">
+      <div class="row">
+        <div class="when">2016</div>
+        <div class="what">
+          <h3><a class="plain" href="https://devpost.com/software/sleepinfo" rel="noreferrer">SleepInfo</a> <span>— Junction 2016, Helsinki</span></h3>
+          <div class="chip">Best use of AWS</div>
+          <p>An Alexa skill that reads your Oura ring sleep data through an AWS Lambda, tells you how well you slept, and talks you out of bed when you would rather not be.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="when">2016</div>
+        <div class="what">
+          <h3><a class="plain" href="https://devpost.com/software/travcal-boxpea" rel="noreferrer">TravCal</a> <span>— LauzHack, Lausanne</span></h3>
+          <div class="chip">Skyscanner challenge winner</div>
+          <p>Scrapes Skyscanner for the cheapest flight and hotel packages out of your home city and drops the suggestions straight into your Google Calendar. I built the front end and the landing page.</p>
+        </div>
+      </div>
       <div class="row">
         <div class="when">2015</div>
         <div class="what">
-          <h3>MyoType <span>— HackLondon</span></h3>
-          <p>A web app that lets people type with simple hand gestures, powered by the Myo armband and Lua, built with three others over a weekend.</p>
+          <h3><a class="plain" href="https://devpost.com/software/myotype" rel="noreferrer">MyoType</a> <span>— HackLondon 2015, London</span></h3>
+          <div class="chip">Best user input hack</div>
+          <p>Typing without a keyboard, for people with fine motor disabilities — simple hand gestures read from a Myo armband in Lua, with DuckDuckGo search built in.</p>
         </div>
       </div>
     </div>
@@ -189,6 +230,28 @@ footer{margin-top:clamp(72px,14vw,140px);padding-top:20px;background-image:linea
       <a href="https://github.com/Claw666" rel="noreferrer">GitHub</a>
       <span class="soon">CV — under construction</span>
     </div>
+  </section>
+
+  <section class="contact">
+    <div class="label"><h2>How this page loads</h2></div>
+    <p>One hand-written HTML file with no dependencies. The styles, the theme switch and every byte of layout travel inside the document, so the browser asks for the page, asks for a 300-byte favicon, and stops.</p>
+    <div class="bar" style="margin-top:28px">
+      <div style="width:60.0%;background:var(--mark)"></div>
+      <div style="width:35.5%;background:color-mix(in srgb,var(--mark) 52%,transparent)"></div>
+      <div style="width:4.5%;background:color-mix(in srgb,var(--mark) 24%,transparent)"></div>
+    </div>
+    <div class="legend">
+      <span><i></i>Markup 9.7&thinsp;KB</span>
+      <span><i class="mid"></i>Styles 5.8&thinsp;KB</span>
+      <span><i class="low"></i>Script 0.7&thinsp;KB</span>
+    </div>
+    <div class="figs">
+      <div><b>5.4&thinsp;KB</b><em>over the wire, gzipped</em></div>
+      <div><b>2</b><em>requests, both first-party</em></div>
+      <div><b>0</b><em>webfonts, frameworks, trackers</em></div>
+      <div><b>1</b><em>render-blocking file: this one</em></div>
+    </div>
+    <p class="note">Type is the system UI face — SF on Apple, Segoe on Windows, Roboto on Android — so nothing is downloaded to render a letter. On a 2G connection the whole page arrives in about a second.</p>
   </section>
 
   <footer>Amsterdam, NL</footer>
