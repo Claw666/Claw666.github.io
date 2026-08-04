@@ -1,210 +1,275 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Csongor Kocsis</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Csongor Kocsis</title>
+<meta name="description" content="Csongor (Tommy) Kocsis — senior software engineer in Amsterdam.">
+<meta name="theme-color" content="#f3f5fe" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#161826" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://csongorkocsis.com/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Csongor Kocsis">
+<meta property="og:description" content="Senior software engineer in Amsterdam.">
+<meta property="og:url" content="https://csongorkocsis.com/">
+<meta property="og:type" content="website">
+<script>try{var t=localStorage.getItem('ck-theme');if(t&&t!=='system')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<style>
+:root{--bg:#f3f5fe;--text:#292b31;--muted:#75798c;--accent:#2b57e6;--divider:rgba(41,43,49,.14);--mark:#4c5397}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#161826;--text:#e9e9ed;--muted:#9397ab;--accent:#7d9dff;--divider:rgba(233,233,237,.16);--mark:#6f7dc9}}
+:root[data-theme=dark]{--bg:#161826;--text:#e9e9ed;--muted:#9397ab;--accent:#7d9dff;--divider:rgba(233,233,237,.16);--mark:#6f7dc9}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;padding:clamp(28px,6vw,64px) clamp(22px,6vw,48px) clamp(64px,10vw,120px)}
+.wrap{max-width:660px;margin:0 auto;animation:rise .5s cubic-bezier(.22,.61,.36,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:4px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+::selection{background:color-mix(in srgb,var(--accent) 26%,transparent)}
+
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:clamp(64px,14vw,140px)}
+.mark{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+#theme{appearance:none;background:transparent;border:1px solid var(--divider);color:var(--muted);font:inherit;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:99px;cursor:pointer;transition:color .2s,border-color .2s}
+#theme:hover{color:var(--text);border-color:var(--accent)}
+
+h1{font-size:clamp(40px,9vw,68px);line-height:1.04;letter-spacing:-.03em;font-weight:600;margin:0 0 clamp(20px,4vw,28px)}
+.lede{font-size:clamp(19px,3.4vw,23px);line-height:1.5;letter-spacing:-.01em;margin:0 0 18px;max-width:34ch;text-wrap:pretty}
+p{margin:0 0 10px;max-width:52ch;text-wrap:pretty}
+.muted{color:var(--muted)}
+
+section{margin-top:clamp(56px,11vw,104px)}
+section.contact{margin-top:clamp(64px,12vw,120px)}
+.label{display:flex;align-items:center;gap:12px;margin-bottom:clamp(20px,4vw,28px)}
+.label::before{content:"";width:18px;height:2px;background:var(--mark);flex:none}
+.label h2{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0}
+
+.list{display:flex;flex-direction:column}
+.row{display:flex;flex-wrap:wrap;gap:4px 24px;padding:20px 0;background-image:linear-gradient(to right,var(--divider),var(--divider) 62%,transparent);background-size:100% 1px;background-repeat:no-repeat;background-position:0 0}
+.list .row:last-child{background-image:linear-gradient(to right,var(--divider),var(--divider) 62%,transparent),linear-gradient(to right,var(--divider),var(--divider) 62%,transparent);background-size:100% 1px,100% 1px;background-repeat:no-repeat,no-repeat;background-position:0 0,0 100%}
+.when{flex:0 0 92px;font-size:13px;color:var(--muted);padding-top:4px;font-variant-numeric:tabular-nums}
+.what{flex:1 1 240px}
+.what h3{font-size:18px;font-weight:600;letter-spacing:-.01em;margin:0 0 4px}
+.what h3 span{color:var(--muted);font-weight:400}
+.what p{margin:0;color:var(--muted);font-size:15px}
+.what p+p{margin-top:8px}
+
+.what h3 a.plain{color:inherit}
+.what h3 a.plain:hover{color:var(--accent);text-decoration:none}
+.chip{display:inline-flex;align-items:center;margin:2px 0 7px;padding:3px 9px;border:1px solid color-mix(in srgb,var(--accent) 40%,transparent);border-radius:99px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;color:var(--accent)}
+.edu{display:flex;flex-wrap:wrap;gap:20px 40px}
+.edu div{flex:1 1 190px}
+.edu .when{padding-top:0;margin-bottom:3px}
+.edu strong{display:block;font-weight:600;letter-spacing:-.01em}
+.edu em{display:block;font-style:normal;color:var(--muted);font-size:15px}
+
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.links a{display:inline-flex;align-items:center;padding:9px 18px;border:1px solid var(--divider);border-radius:99px;font-size:15px;color:var(--text);transition:border-color .2s,background-color .2s}
+.links a:hover{border-color:var(--accent);text-decoration:none}
+.links .soon{display:inline-flex;align-items:center;padding:9px 18px;border:1px dashed var(--divider);border-radius:99px;font-size:15px;color:var(--muted)}
+.links a.primary{border-color:var(--accent);color:var(--accent)}
+.links a.primary:hover{background:color-mix(in srgb,var(--accent) 12%,transparent)}
+
+.bar{display:flex;height:8px;border-radius:99px;overflow:hidden;background:var(--divider);margin-bottom:14px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 22px;font-size:13px;color:var(--muted);margin-bottom:clamp(36px,7vw,52px)}
+.legend>span{display:inline-flex;align-items:center;gap:7px}
+.legend i{width:8px;height:8px;border-radius:99px;background:var(--mark);flex:none}
+.legend i.mid{background:color-mix(in srgb,var(--mark) 52%,transparent)}
+.legend i.low{background:color-mix(in srgb,var(--mark) 24%,transparent)}
+.figs{display:flex;flex-wrap:wrap;gap:28px 40px}
+.figs>div{flex:0 1 120px}
+.figs b{display:block;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:24px;font-weight:400;letter-spacing:-.02em;font-variant-numeric:tabular-nums;margin-bottom:2px}
+.figs em{font-style:normal;font-size:13px;color:var(--muted)}
+.note{color:var(--muted);font-size:15px;margin:28px 0 0;max-width:52ch}
+footer{margin-top:clamp(72px,14vw,140px);padding-top:20px;background-image:linear-gradient(to right,var(--divider),var(--divider) 62%,transparent);background-size:100% 1px;background-repeat:no-repeat;background-position:0 0;font-size:13px;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
 </head>
 <body>
+<div class="wrap">
 
-	<!-- Sidebar -->
-	<section id="sidebar">
-		<div class="inner">
-			<nav>
-				<ul>
-					<li><a href="#intro">Welcome</a></li>
-					<li><a href="#one">Portfolio</a></li>
-					<li><a href="#two">Skills</a></li>
-					<li><a href="#three">Get in touch</a></li>
-				</ul>
-			</nav>
-		</div>
-	</section>
+  <header>
+    <span class="mark">CK</span>
+    <button id="theme" type="button" aria-label="Switch colour theme">Auto</button>
+  </header>
 
-	<!-- Wrapper -->
-	<div id="wrapper">
+  <h1>Csongor Kocsis</h1>
+  <p class="lede">Senior software engineer in Amsterdam. Most people call me Csongor, but Tommy works too.</p>
+  <p class="muted">I build software for a living and take things apart for the rest of it — if it can be made rather than bought, I would rather make it. Usually that means electronics on the desk and something on the stove.</p>
 
-		<!-- Intro -->
-		<section id="intro" class="wrapper style1 fullscreen fade-up">
-			<div class="inner">
-				<h1>Csongor Kocsis</h1>
-				<p>WEB &#183; UI/UX &#183; ECOMMERCE &#183; FULL-STACK DEVELOPER &#183; DESIGNER</p>
-				<ul class="actions">
-					<li><a href="#one" class="button scrolly">Learn more</a></li>
-				</ul>
-			</div>
-		</section>
+  <section>
+    <div class="label"><h2>Now</h2></div>
+    <p>Senior software engineer at <a href="https://vespertool.com" rel="noreferrer">Vesper</a> in Amsterdam, focusing on ops with security on the side.</p>
+    <p>Building a personal NAS media server out of open source projects — my own streaming service, running at home.</p>
+    <p class="muted">Boxing and kickboxing four times a week, cooking most of what is left.</p>
+  </section>
 
-		<!-- One -->
-		<section id="one" class="wrapper spotlights">
-			<section class="wrapper style-uwork">
-				<a href="https://www.uwork.co.uk/" class="image"><img src="images/uwork_mac.png" alt="" data-position="center center" /></a>
-				<div class="content">
-					<div class="inner">
-						<h2>Uwork</h2>
-						<p>I was part of the frontend development team working closely with the UX designer and backend coders. I was creating several modules on the site in order to create a highly moduler structure hence creating a cleaner and faster coding. </p>
-						<ul class="actions">
-							<li><a href="https://www.uwork.co.uk/" class="button">Launch Site</a></li>
-						</ul>
-					</div>
-				</div>
-			</section>
-			<section class="wrapper style-nch">
-				<a href="http://csongorkocsis.com/nhc/index.html" class="image"><img src="images/nch_mac.png" alt="" data-position="top center" /></a>
-				<div class="content">
-					<div class="inner">
-						<h2>NCH</h2>
-						<p>Concept Design for National Concert Hall. The design focused on tablet expericnce to quickly find rooms and display the information with a pleasant look.</p>
-						<ul class="actions">
-							<li><a href="http://csongorkocsis.com/nhc/index.html" class="button">Launch Site</a></li>
-						</ul>
-					</div>
-				</div>
-			</section>
-			<section class="wrapper style-oats">
-				<a href="https://oatcosmetics.com/" class="image"><img src="images/oat_mac.png" alt="" data-position="25% 25%" /></a>
-				<div class="content">
-					<div class="inner">
-						<h2>Oat Cosmetics</h2>
-						<p>This project involved the following tasks: Brand design, custom images, website building, SEO optimisation.</p>
-						<ul class="actions">
-							<li><a href="https://oatcosmetics.com/" class="button">Launch Site</a></li>
-						</ul>
-					</div>
-				</div>
-			</section>
-			<section class="wrapper style-mykl">
-				<a href="https://csongorkocsis.com/mykl" class="image"><img src="images/mykl_mac.png" alt="" data-position="25% 25%" /></a>
-				<div class="content">
-					<div class="inner">
-						<h2>MYKL</h2>
-						<p>Custom landing page build for the musician.</p>
-						<ul class="actions">
-							<li><a href="https://csongorkocsis.com/mykl" class="button">Launch Site</a></li>
-						</ul>
-					</div>
-				</div>
-			</section>
-			<section class="wrapper style-sp">
-				<a href="#" class="image"><img src="images/sp_mac.png" alt="" data-position="25% 25%" /></a>
-				<div class="content">
-					<div class="inner">
-						<h2>Wayfinding for UoS Science Park</h2>
-						<p>This project involved creating a custom frontend for the visitors and a custom backend user system for the Universrity of Science Park as well. That way they have access to the list of current companies and can update their information in real time.</p>
-					</div>
-				</div>
-			</section>
-			<section class="wrapper style-sparks">
-				<a href="https://csongorkocsis.com/sparks/" class="image"><img src="images/sparks_mac.png" alt="" data-position="25% 25%" /></a>
-				<div class="content">
-					<div class="inner">
-						<h2>Spark Southampton</h2>
-						<p>Spark Southampton is a technology incubator program to help students bring their ideas come true.</p>
-						<ul class="actions">
-							<li><a href="https://csongorkocsis.com/sparks/" class="button">Launch Site</a></li>
-						</ul>
-					</div>
-				</div>
-			</section>
-		</section>
+  <section>
+    <div class="label"><h2>Work</h2></div>
+    <div class="list">
+      <div class="row">
+        <div class="when">2022 — now</div>
+        <div class="what">
+          <h3>Vesper <span>— Senior Software Engineer</span></h3>
+          <p>Mostly internal tooling. We built and maintain the identity management system, and built a fuzzy product matching tool together with the AI team for internal use.</p>
+          <p>On the security side I ran a phishing campaign to show where our cybersecurity flaws sat, and hold security trainings for the company.</p>
+          <p>Still in Laravel and Vue.js day to day, with Terraform, Ansible and Packer on the infrastructure side.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="when">2022</div>
+        <div class="what">
+          <h3>Gemeente Amsterdam <span>— Data Science Intern</span></h3>
+          <p>Improved the city's crowdedness predictions for public transport stations using planned-event data. No single public source existed, so gathering and cleaning that data automatically was most of the work.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="when">2020 — 2021</div>
+        <div class="what">
+          <h3>Proptee <span>— iOS and Web Developer</span></h3>
+          <p>Redesigned the website mobile-first for a better UX, implemented major features in Swift and SwiftUI, and built custom NextJS components used across both the website and the iOS app. Also made the <a href="https://www.youtube.com/watch?v=ORpQzFmB0o4" rel="noreferrer">commercial ad video</a>, my first.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="when">2020 — 2021</div>
+        <div class="what">
+          <h3>Maastricht University <span>— Web Developer</span></h3>
+          <p>The Student Challenge Board — a platform connecting students with the university's external partners, where companies post challenges and students submit proposals against set deadlines.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="when">2016 — 2019</div>
+        <div class="what">
+          <h3>Self-employed <span>— Freelance Developer and Designer</span></h3>
+          <p>Highly functional sites from scratch or on an existing CMS, CMS management, hosting migrations, and image work in Photoshop.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="when">2015 — 2019</div>
+        <div class="what">
+          <h3>TrouDigital <span>— Web Developer</span></h3>
+          <p>Built sites from mock-ups on existing content management systems, handled maintenance and client-side changes, and wrote plugins where a specific task needed one.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-		<!-- Two -->
-		<section id="two" class="wrapper style2 fade-up">
-			<div class="inner">
-				<h2>What I do</h2>
-				<p>A self learned web developer and designer, who polished his skills throughout the projects. Worked more than 2 dozens clients and always focused on customer satisfaction. Always educating  myself to keep up to date with the latest technology changes and trends. </p>
-				<div class="features">
-					<section>
-						<span class="icon major fa-code"></span>
-						<h3>Coding</h3>
-						<p>HTML5, CSS3, Vanilla JavaScript, JQuery, NodeJS, MongoDB, MYSQL, AngularJS, Bootstrap, Materialize, LESS, Express, Wordpress</p>
-					</section>
-					<section>
-						<span class="icon major fa-lock"></span>
-						<h3>Security</h3>
-						<p>Backing up any information, using password manager to store credentials, secure server network connections are my daily tasks.</p>
-					</section>
-					<section>
-						<span class="icon major fa-cog"></span>
-						<h3>Version Control</h3>
-						<p>Keeping track of code changes is not just useful for me but for the rest of the team members as well.</p>
-					</section>
-					<section>
-						<span class="icon major fa-desktop"></span>
-						<h3>Responsive Design</h3>
-						<p>In any project I make sure that the application works as designed in the specified environment. Hence a website is always mobile friendly as well.</p>
-					</section>
-					<section>
-						<span class="icon major fa-chain"></span>
-						<h3>Remote / Face to Face</h3>
-						<p>Usually working remotely as most of my clients are from different countries. In case the client from intown, I am more than happy to schedule meetings with them.</p>
-					</section>
-					<section>
-						<span class="icon major fa-diamond"></span>
-						<h3>Excellent Code Quality</h3>
-						<p>I learned in the early stage that keeping a clean code is not just useful but kind of mandatory today's world.</p>
-					</section>
-				</div>
-			</div>
-		</section>
+  <section>
+    <div class="label"><h2>Selected projects</h2></div>
+    <div class="list">
+      <div class="row">
+        <div class="when">2020 — 2021</div>
+        <div class="what">
+          <h3>Port of Rotterdam <span>— Data Scientist</span></h3>
+          <p>A computer simulation of port efficiency and risk, using machine learning and forecasting to find where the bottlenecks actually sit.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="when">2015 — 2018</div>
+        <div class="what">
+          <h3>ECS Entrepreneurs <span>— VP of Events, Treasurer, Webmaster</span></h3>
+          <p>Ran the talks, workshops and incubator programme, oversaw expenses and funding alongside the President, and kept the society's site and social channels running.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="when">2016</div>
+        <div class="what">
+          <h3>Cascoda <span>— Student Consultant, Team Leader</span></h3>
+          <p>Explored novel university-based recruiting for a fast-growing tech company, leading the team and owning the short-term plan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-		<!-- Three -->
-		<section id="three" class="wrapper style1 fade-up">
-			<div class="inner">
-				<h2>Get in touch</h2>
-				<p>If you have any questions regarding with my work or would like to discuss a project colleboration, feel free to drop me a message!</p>
-				<div>
-					<section>
-						<ul class="contact">
-							<div class="split">
-								<li>
-									<h3>Email</h3>
-									<a href="mailto:csongor.kocsis@icloud.com">csongor.kocsis@icloud.com</a>
-								</li>
-								<li>
-									<h3>Phone</h3>
-									<span>+36 30 521 3319</span>
-								</li>
-							</div>
-							<li>
-								<h3>Social</h3>
-								<ul class="icons">
-									<li><a href="https://twitter.com/csongorkocsis" class="fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="https://github.com/Claw666" class="fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="https://www.instagram.com/csongorkocsis/" class="fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="https://www.linkedin.com/in/csongorkocsis/" class="fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://www.youtube.com/channel/UC0ZlLSnigL7nKRajfWR_o9A?view_as=subscriber" class="fa-youtube"><span class="label">Youtube</span></a></li>
-								</ul>
-							</li>
-						</ul>
-					</section>
-				</div>
-			</div>
-		</section>
+  <section>
+    <div class="label"><h2>Hackathons</h2></div>
+    <p>Three entered, three won. Full write-ups on <a href="https://devpost.com/Claw666" rel="noreferrer">Devpost</a>.</p>
+    <div class="list" style="margin-top:8px">
+      <div class="row">
+        <div class="when">2016</div>
+        <div class="what">
+          <h3><a class="plain" href="https://devpost.com/software/sleepinfo" rel="noreferrer">SleepInfo</a> <span>— Junction 2016, Helsinki</span></h3>
+          <div class="chip">Best use of AWS</div>
+          <p>An Alexa skill that reads your Oura ring sleep data through an AWS Lambda, tells you how well you slept, and talks you out of bed when you would rather not be.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="when">2016</div>
+        <div class="what">
+          <h3><a class="plain" href="https://devpost.com/software/travcal-boxpea" rel="noreferrer">TravCal</a> <span>— LauzHack, Lausanne</span></h3>
+          <div class="chip">Skyscanner challenge winner</div>
+          <p>Scrapes Skyscanner for the cheapest flight and hotel packages out of your home city and drops the suggestions straight into your Google Calendar. I built the front end and the landing page.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="when">2015</div>
+        <div class="what">
+          <h3><a class="plain" href="https://devpost.com/software/myotype" rel="noreferrer">MyoType</a> <span>— HackLondon 2015, London</span></h3>
+          <div class="chip">Best user input hack</div>
+          <p>Typing without a keyboard, for people with fine motor disabilities — simple hand gestures read from a Myo armband in Lua, with DuckDuckGo search built in.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-	</div>
+  <section>
+    <div class="label"><h2>Education</h2></div>
+    <div class="edu">
+      <div><div class="when">2021 — 2022</div><strong>University of Amsterdam</strong><em>MSc Information Studies, Data Science</em></div>
+      <div><div class="when">2018 — 2021</div><strong>Maastricht University</strong><em>BSc Data Science and Knowledge Engineering</em></div>
+      <div><div class="when">2014 — 2017</div><strong>University of Southampton</strong><em>BEng Electronics Engineering</em></div>
+    </div>
+  </section>
 
-	<!-- Footer -->
-	<footer id="footer" class="wrapper style2">
-		<div class="inner">
-			<ul class="menu">
-				<li>&copy; Csongor Kocsis. All rights reserved.</li><li><script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script></li>
-			</ul>
-		</div>
-	</footer>
+  <section class="contact">
+    <div class="label"><h2>Contact</h2></div>
+    <p>Happy to talk about engineering work, data problems, or anything worth building by hand.</p>
+    <div class="links">
+      <a class="primary" href="mailto:csongor.kocsis.t@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/csongorkocsis/" rel="noreferrer">LinkedIn</a>
+      <a href="https://github.com/Claw666" rel="noreferrer">GitHub</a>
+      <span class="soon">CV — under construction</span>
+    </div>
+  </section>
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/skel.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-	<script src="assets/js/main.js"></script>
+  <section class="contact">
+    <div class="label"><h2>How this page loads</h2></div>
+    <p>One hand-written HTML file with no dependencies. The styles, the theme switch and every byte of layout travel inside the document, so the browser asks for the page, asks for a 300-byte favicon, and stops.</p>
+    <div class="bar" style="margin-top:28px">
+      <div style="width:60.0%;background:var(--mark)"></div>
+      <div style="width:35.5%;background:color-mix(in srgb,var(--mark) 52%,transparent)"></div>
+      <div style="width:4.5%;background:color-mix(in srgb,var(--mark) 24%,transparent)"></div>
+    </div>
+    <div class="legend">
+      <span><i></i>Markup 9.7&thinsp;KB</span>
+      <span><i class="mid"></i>Styles 5.8&thinsp;KB</span>
+      <span><i class="low"></i>Script 0.7&thinsp;KB</span>
+    </div>
+    <div class="figs">
+      <div><b>5.4&thinsp;KB</b><em>over the wire, gzipped</em></div>
+      <div><b>2</b><em>requests, both first-party</em></div>
+      <div><b>0</b><em>webfonts, frameworks, trackers</em></div>
+      <div><b>1</b><em>render-blocking file: this one</em></div>
+    </div>
+    <p class="note">Type is the system UI face — SF on Apple, Segoe on Windows, Roboto on Android — so nothing is downloaded to render a letter. On a 2G connection the whole page arrives in about a second.</p>
+  </section>
 
+  <footer>Amsterdam, NL</footer>
+
+</div>
+<script>
+(function(){
+  var order=['system','light','dark'],labels={system:'Auto',light:'Light',dark:'Dark'},btn=document.getElementById('theme'),cur='system';
+  try{cur=localStorage.getItem('ck-theme')||'system'}catch(e){}
+  btn.textContent=labels[cur];
+  btn.addEventListener('click',function(){
+    cur=order[(order.indexOf(cur)+1)%order.length];
+    btn.textContent=labels[cur];
+    if(cur==='system')document.documentElement.removeAttribute('data-theme');
+    else document.documentElement.setAttribute('data-theme',cur);
+    try{localStorage.setItem('ck-theme',cur)}catch(e){}
+  });
+})();
+</script>
 </body>
 </html>
